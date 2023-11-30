@@ -1,12 +1,20 @@
 import express from 'express';
 import { boRouter } from './routes/bo.route.js';
+import "reflect-metadata";
+import { AppDataSource } from './data-source.js';
+
 const app = express();
-// o express funciona por ordem de "chegada" exemplo se o app.listen estiver acima do get o get nao funcionara por que ele stopa no listen
+AppDataSource.initialize()
+    .then(() => {
+        // here you can start to work with your database
+    })
+    .catch((error) => console.log(error))
+
 
 app.use(express.json());
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.send('BO API');
 })
 
 app.use(boRouter);

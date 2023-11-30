@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { boController } from '../controllers/bo.controller.js';
+import { studentsController } from '../controllers/students.controller.js';
 
 export const boRouter = Router();
 
-boRouter.get('/students', boController.index);
+boRouter.get('/students', studentsController.index);

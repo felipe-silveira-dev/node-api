@@ -1,4 +1,4 @@
-class BoController {
+class StudentsController {
     index(req, res) {
         const students = [
             { id: 1, name: 'John Doe' },
@@ -9,4 +9,4 @@ class BoController {
     }
 }
 
-export const boController = new BoController();
+export const studentsController = new StudentsController();
