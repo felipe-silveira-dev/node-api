@@ -1,7 +1,12 @@
 class BoController {
     index(req, res) {
-        res.json('Hello World from students  controller list!');
+        const students = [
+            { id: 1, name: 'John Doe' },
+            { id: 2, name: 'Felipe Doe' },
+            { id: 3, name: 'Samuel Doe' },
+        ];
+        res.json(students);
     }
 }
 
-exports.boController = new BoController();
+export const boController = new BoController();

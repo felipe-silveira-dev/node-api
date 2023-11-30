@@ -1,9 +1,6 @@
-const { Router } = require('express');
-const { boController } = require('../controllers/bo.controller');
+import { Router } from 'express';
+import { boController } from '../controllers/bo.controller.js';
 
-const boRouter = Router();
+export const boRouter = Router();
 
 boRouter.get('/students', boController.index);
-
-
-exports.boRouter = boRouter;
